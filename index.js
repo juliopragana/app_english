@@ -14,7 +14,7 @@ const levelsController = require("./controllers/levelsController");
 const conversationController = require("./controllers/conversationController");
 
 //Conexao com o banco de dados
-const connection = require("./database/database");
+const connection = require("./database/connection");
 const connectionMongo = require("./database/database-mongo");
 
 //Cors
