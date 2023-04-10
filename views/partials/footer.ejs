@@ -1,0 +1,28 @@
+</body>
+<script src="/res/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery-3.5.1.js"></script>
+<script src="/res/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/res/datatables.net/js/dataTables.bootstrap5.min.js"></script>
+<script src="/res/datatables.net/js/dataTables.buttons.min.js"></script>
+<script src="/res/datatables.net/js/dataTables.select.min.js"></script>
+<script src="/res/datatables.net/js/dataTables.dateTime.min.js"></script>
+<script src="/res/datatables.net/js/dataTables.editor.min.js"></script>
+<script src="/res/fontawesome/js/all.min.js"></script>
+<script src="/js/load_table.js"></script>
+<script src="/js/axios.min.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/requests.js"></script>
+<script src="/js/audio.js"></script>
+<!-- custom js -->
+<script>
+    var menu_btn = document.querySelector("#menu-btn");
+    var sidebar = document.querySelector("#sidebar");
+    var container = document.querySelector(".my-container");
+    var topNavBar = document.querySelector(".top-navbar");
+    menu_btn.addEventListener("click", () => {
+      sidebar.classList.toggle("active-nav");
+      container.classList.toggle("active-cont");
+      topNavBar.classList.toggle("active-top-nav");
+    });
+</script>
+</html>

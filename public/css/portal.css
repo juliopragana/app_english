@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.btnVoice{
+    background-color: rgb(50, 46, 100);
+    color: #fff;
+}
+
+.btnVoice:hover{
+    background-color: rgb(93, 88, 163);
+    color: #fff;
+}
+

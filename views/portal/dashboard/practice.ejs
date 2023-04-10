@@ -1,0 +1,72 @@
+<%- include ('../../partials-portal/header') %>
+<%- include ('../../partials-portal/navbar') %>
+
+<div class="py-1 text-center align-items-center d-flex m-0" >
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/dashboard">Início</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"><%=title%></li>
+                    </ol>
+                  </nav>
+                <div class="text-center mb-5 bg-light">
+                    <h1 class="display-5"><%=title%></h1>          
+                </div>
+              
+                <% phrases.forEach((phrase) => { %>
+                    <div class="card mb-3" id="card-<%=phrase.id%>">
+                        <div class="card-body" >
+                            <div class="row">
+                                <div class="col-md-12" id="res-<%=phrase.id%>"></div>
+                                <div class="col-md-3">
+                                    <small>Frase em inglês</small>
+                                    <h4><b><span ><%= phrase.english %></span> <img src="/img/icons/audio.png" onclick='sound("<%=phrase.english%>")' style="cursor: pointer"> </b></h4>                                         
+                               </div>
+                                <div class="col-md-3">
+                                    <small>Pronúncia</small>
+                                    <h5 class="card-subtitle my-2 text-muted"><b><%= phrase.pronunciation %></b></h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <small>Tradução</small>
+                                    <h5 class="card-text"><b><%= phrase.portuguese %></b></h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <% 
+                                        var text = phrase.english //comentario
+                                        var rep = text.replace(",", "")
+                                        var rep2 = rep.replace("?", "")
+                                        var rep3 = rep2.replace("too", "to")
+                                        var rep4 = rep3.replace(".", "") 
+                                    %>
+                                    <div class="mt-2">
+                                        <button class="btn btnVoice" id="btn-<%=phrase.id%>" onclick='voice("<%=phrase.id%>", "<%=rep4%>")'><img src="/img/icons/microfone-b.png" id="icon"> Testar fala</button>
+                                    </div>                                    
+                                    
+                                </div>
+                            </div>           
+                        </div>  
+                    </div>
+                <% }) %>
+        </div>
+    </div>
+
+</div>
+
+</div>
+<div class="d-flex justify-content-end align-items-end">
+    <div class="container-fluid mb-4">
+        <div class="row">
+            <div class="col-md-10">
+
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-lg btn-success" href="/dashboard">Voltar</a>               
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('../../partials-portal/footer') %>

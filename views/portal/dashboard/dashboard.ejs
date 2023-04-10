@@ -1,0 +1,32 @@
+<%- include ('../../partials/header') %>
+<%- include ('../../partials-portal/navbar') %>
+
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+
+        <% levels.forEach((level) => { %>
+            <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h3><%= level.name %></h3>
+                  </div>
+                  <div class="card-body text-center" >
+                        <% categories.forEach((category) => { %>
+                        <div class="d-flex justify-content-between mb-3">
+                            <% if(category.level.name == level.name) { %>                              
+                                <h5><%= category.name %></h5>                                
+                               <a class="btn btn-sm btn-secondary" href="/dashboard/practice/<%= category.name %>"> Praticar</a>
+                                                                                           
+                            <% } %>
+                        </div>                            
+                        <% }) %>              
+                  </div>
+                </div>
+              </div>
+        <% }) %>
+        
+      </div>
+    </div>
+  </div>
+  <%- include ('../../partials/footer') %>

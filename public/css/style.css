@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Public Sans', sans-serif;
+  }
+  
+  .side-navbar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    margin-left: -300px;
+    background-color: #0a043a;
+    transition: 0.5s;
+  }
+
+  .side-navbar a {
+    text-decoration: none !important;
+  }
+
+  .side-navbar ul li{
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  
+  .top-navbar {
+    transition: 0.10s;
+    margin-left: 250px;
+  }
+
+  .nav-link{
+    text-decoration:none;
+    color: #fff;
+  }
+
+  .nav-link:active,
+  .nav-link:focus,
+  .nav-link:hover {
+    background-color: #4c3cc0;
+  }
+
+  .my-container {
+    background-color: #fff;
+    transition: 0.4s;
+  }
+  
+  .active-nav {
+    margin-left: 0;
+  }
+
+  .active-top-nav {
+    transition: 0.7s;
+    margin-left: 0;
+  }
+
+
+  /* for main section */
+  .active-cont {
+   
+    margin-left: 250px;
+  }
+  
+  #menu-btn {
+    background-color: #0a043a;
+    color: #fff;
+    margin-left: -62px;
+  }
+  
+  .my-container input {
+    border-radius: 2rem;
+    padding: 2px 20px;
+  }
+  
+
+  #container {
+    background-color: #f7f7f7;
+  }
